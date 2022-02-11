@@ -12,7 +12,7 @@
 ; Options:
 
 global Delay := 90 ; The amount of delay between each mouse/key press
-global SaveAndQuitDelay := 150 ; The amount of time between the macro pressing "Escape" and it pressing "SaveAndQuit". If you are experiencing crashes, Increase this number
+global SaveAndQuitDelay := 350 ; The amount of time between the macro pressing "Escape" and it pressing "SaveAndQuit". If you are experiencing crashes, Increase this number
 global liveSplitStart := "F7" ; The key that starts your LiveSplit timer, Preferably use a function key
 global liveSplitReset := "F8" ; The key that resets your LiveSplit timer, Preferably use a function key
 global instanceCount := 4 ; The amount of instances you are using
@@ -39,14 +39,17 @@ SaveAndQuit2()
 CreateWorld() 
 {
       Send {Tab}
+      Sleep 100
+      Send {Enter}
+      Sleep 200
+      Send {Tab}
+      Send {Tab}
+      Send {Tab}
+      Sleep 100
       Send {Enter}
       Sleep 100
       Send {Tab}
-      Send {Tab}
-      Send {Tab}
-      Send {Enter}
-      Sleep 100
-      Send {Tab}
+      Sleep 50
       Send {Enter}
 
       
