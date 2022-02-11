@@ -11,139 +11,46 @@
 
 ; Options:
 
-global Delay := 70 ; The amount of delay between each mouse/key press
+global Delay := 90 ; The amount of delay between each mouse/key press
 global SaveAndQuitDelay := 150 ; The amount of time between the macro pressing "Escape" and it pressing "SaveAndQuit". If you are experiencing crashes, Increase this number
 global liveSplitStart := "F7" ; The key that starts your LiveSplit timer, Preferably use a function key
 global liveSplitReset := "F8" ; The key that resets your LiveSplit timer, Preferably use a function key
 global instanceCount := 4 ; The amount of instances you are using
-global hardcore := "No" ; Change this to "Yes" if you play Hardcore mode
-global guiScale := "Large" ; Available GUI scales "Auto" "Large" "Normal" "Small"
+
 
 SetMouseDelay, -1
 SetKeyDelay, -1
 
 SaveAndQuit()
 {
-  if (guiScale = "Auto")
-    {
-      Send, {Escape}
+      Send {Escape}
       Sleep SaveAndQuitDelay
-      MouseClick, Left, 960, 720 
-    }
-  else if (guiScale = "Large")
-    {
-      Send, {Escape}
-      Sleep SaveAndQuitDelay
-      MouseClick, Left, 960, 610
-    }
-  else if (guiScale = "Normal")
-    {
-      Send, {Escape}
-      Sleep SaveAndQuitDelay
-      MouseClick, Left, 960, 500
-    }
-  else if (guiScale = "Small")
-    {
-      Send, {Escape}
-      Sleep SaveAndQuitDelay
-      MouseClick, Left, 960, 385
-    }
-}
-
-CreateWorld() 
-{
-  if (guiScale = "Auto" && hardcore = "Yes")
-    {
-      MouseClick, Left, 950, 500
-      Sleep Delay
-      MouseClick, Left, 1270, 910
-      Sleep Delay
-      MouseClick, Left, 970, 500
-      Sleep Delay
-      MouseClick, Left, 640, 1000
-    }
-  else if (guiScale = "Large" && hardcore = "Yes")
-    {
-      MouseClick, Left, 950, 450 
-      Sleep Delay
-      MouseClick, Left, 1200, 950
-      Sleep Delay
-      MouseClick, Left, 960, 380
-      Sleep Delay
-      MouseClick, Left, 720, 1030
-    }
-  else if (guiScale = "Normal" && hardcore = "Yes")
-    {
-      MouseClick, Left, 960, 390
-      Sleep Delay
-      MouseClick, Left, 1118, 1000
-      Sleep Delay
-      MouseClick, Left, 960, 250
-      Sleep Delay
-      MouseClick, Left, 800, 1045
-    }
-  else if (guiScale = "Small" && hardcore = "Yes")
-    {
-      MouseClick, Left, 960, 330
-      Sleep Delay
-      MouseClick, Left, 1040, 1040
-      Sleep Delay
-      MouseClick, Left, 960, 130
-      Sleep Delay
-      MouseClick, Left, 880, 1060
-    }
-  else if (guiScale = "Auto" && hardcore = "No")
-    {
-      MouseClick, Left, 950, 500
-      Sleep Delay
-      MouseClick, Left, 1270, 910
-      Sleep Delay
-      MouseClick, Left, 640, 1000
-    }
-  else if (guiScale = "Large" && hardcore = "No")
-    {
-      MouseClick, Left, 950, 450 
-      Sleep Delay
-      MouseClick, Left, 1200, 950
-      Sleep Delay
-      MouseClick, Left, 720, 1030
-    }
-  else if (guiScale = "Normal" && hardcore = "No")
-    {
-      MouseClick, Left, 960, 390
-      Sleep Delay
-      MouseClick, Left, 1118, 1000
-      Sleep Delay
-      MouseClick, Left, 800, 1045
-    }
-  else if (guiScale = "Small" && hardcore = "No")
-    {
-      MouseClick, Left, 960, 330
-      Sleep Delay
-      MouseClick, Left, 1040, 1040
-      Sleep Delay
-      MouseClick, Left, 880, 1060
-    }
+      Send {Tab}
+      Sleep 100
+      Send {Enter}
 }
 
 SaveAndQuit2()
 {
-  if (guiScale = "Auto")
-    {
-      MouseClick, Left, 960, 720
-    }
-  else if (guiScale = "Large")
-    {
-      MouseClick, Left, 960, 610
-    }
-  else if (guiScale = "Normal")
-    {
-      MouseClick, Left, 960, 500
-    }
-  else if (guiScale = "Small")
-    {
-      MouseMove, 960, 385
-    }
+
+}
+
+
+CreateWorld() 
+{
+      Send {Tab}
+      Send {Enter}
+      Sleep 100
+      Send {Tab}
+      Send {Tab}
+      Send {Tab}
+      Send {Enter}
+      Sleep 100
+      Send {Tab}
+      Send {Enter}
+
+      
+      
 }
 
 
